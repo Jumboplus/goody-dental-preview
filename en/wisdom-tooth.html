@@ -138,6 +138,11 @@ h1,h2,h3{text-wrap:balance;margin:0;line-break:strict}p,li,dd{text-wrap:pretty}
 .inside figure,.shot{margin:0}.inside img{width:100%}
 figcaption{padding-top:8px;font-size:var(--s1);color:var(--ink2)}
 .findus{margin:24px 0 0}.findus img{width:100%}
+/* stock photos */
+.pp{margin:0 0 20px}.pp img{width:100%;height:auto;display:block;border-radius:4px;background:var(--tone)}
+.pp figcaption{padding-top:6px}
+.pp.w45{max-width:min(300px,100%)}
+.pp.xw{margin:24px 0}.pp.xw img{filter:grayscale(1) contrast(1.05)}
 /* tooth diagram */
 .teeth{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:32px}
 @media(min-width:640px){.teeth{grid-template-columns:1fr 1fr;gap:40px}}
@@ -244,6 +249,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}@media(min-width:96
 
 <section class="sec" id="when" aria-labelledby="when-h"><h2 id="when-h">When does a wisdom tooth need to come out?</h2>
 <p>An impacted wisdom tooth cannot come through normally because it is blocked by the tooth in front, by bone or by gum. Not every wisdom tooth has to be removed; the dentist decides from your symptoms and the X-ray. A straight, fully erupted tooth is simply extracted, without opening the gum.</p>
+<figure class="pp xw"><picture><source type="image/avif" srcset="../assets/photos/panoramic-xray-wisdom-teeth-600.avif 600w, ../assets/photos/panoramic-xray-wisdom-teeth-1100.avif 1100w" sizes="(min-width:1180px) 1084px, 92vw"><img src="../assets/photos/panoramic-xray-wisdom-teeth-600.webp" srcset="../assets/photos/panoramic-xray-wisdom-teeth-600.webp 600w, ../assets/photos/panoramic-xray-wisdom-teeth-1100.webp 1100w" sizes="(min-width:1180px) 1084px, 92vw" alt="A panoramic dental X-ray showing the upper and lower teeth and the jawbone" width="1100" height="550" loading="lazy" decoding="async" fetchpriority="low"></picture><figcaption>Stock photo: a panoramic X-ray, the type used to see where a wisdom tooth sits</figcaption></figure>
 <p class="note">The drawings show the second molar (black outline) and the wisdom tooth (green outline). The dashed line is the top of the bone.</p>
 <ul class="teeth"><li><svg viewBox="0 0 200 150" aria-hidden="true" focusable="false"><rect x="0" y="60" width="200" height="90" fill="#EEF2E6"/><path d="M0 60 H200" stroke="#9AA08E" stroke-width="1.5" stroke-dasharray="4 4"/>
 <path d="M0 50 Q25 42 50 50 T100 50 T150 50 T200 50" fill="none" stroke="#44473C" stroke-width="2"/>
