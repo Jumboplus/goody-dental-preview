@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://example.com/</loc></url>
+<url><loc>https://example.com/contact/</loc></url>
+<url><loc>https://example.com/en/</loc></url>
+<url><loc>https://example.com/en/contact/</loc></url>
+<url><loc>https://example.com/en/price-list/</loc></url>
+<url><loc>https://example.com/en/services/wisdom-tooth/</loc></url>
+<url><loc>https://example.com/en/teeth-whitening/</loc></url>
+<url><loc>https://example.com/en/veneers/</loc></url>
+<url><loc>https://example.com/price-list/</loc></url>
+<url><loc>https://example.com/services/</loc></url>
+<url><loc>https://example.com/services/extraction/</loc></url>
+<url><loc>https://example.com/services/filling/</loc></url>
+<url><loc>https://example.com/services/orthodontics/</loc></url>
+<url><loc>https://example.com/services/retainer/</loc></url>
+<url><loc>https://example.com/services/root-canal/</loc></url>
+<url><loc>https://example.com/services/scaling/</loc></url>
+<url><loc>https://example.com/services/social-security/</loc></url>
+<url><loc>https://example.com/services/veneers/</loc></url>
+<url><loc>https://example.com/services/whitening/</loc></url>
+<url><loc>https://example.com/services/wisdom-tooth/</loc></url>
+</urlset>

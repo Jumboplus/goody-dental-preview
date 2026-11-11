@@ -1,2 +1,3 @@
+# Draft site (LAUNCH=False in src/build.py): keep every crawler out.
 User-agent: *
 Disallow: /
