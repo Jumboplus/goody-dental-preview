@@ -177,7 +177,9 @@ main section h2:not(#toc-h)::before{content:"";display:block;width:32px;height:4
 .gal-btn{all:unset;box-sizing:border-box;width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--green-d);cursor:pointer}
 .gal-btn svg{width:22px;height:22px}.gal-btn[data-dir="-1"] svg{transform:scaleX(-1)}
 .gal-btn:focus-visible{outline:3px solid var(--ink);outline-offset:2px}.gal-btn[aria-disabled=true]{opacity:.45;cursor:default}
-.gal-count{margin:0;min-width:5em;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.gal-count{margin:0;min-width:8.5em;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.gal.cases img{aspect-ratio:3/2}.gal.promo img{aspect-ratio:1}.gal-note{display:block}
+@media(min-width:760px){.gal.cases .gal-track{grid-auto-columns:calc((100% - var(--sp5))/2)}.gal.promo .gal-track{grid-auto-columns:calc((100% - 2*var(--sp5))/3)}}
 figcaption{padding-top:8px;font-size:var(--s1);color:var(--ink2)}
 .findus{margin:var(--sp4) 0 0}.findus img{width:100%}
 /* stock photos: one shape for all */
@@ -225,7 +227,7 @@ figcaption{padding-top:8px;font-size:var(--s1);color:var(--ink2)}
 .toc a[aria-current=true]::before,.toc a:hover::before{transform:scaleY(1)}
 @media(min-width:1000px){.toc ol{grid-template-columns:1fr}.toc nav{position:sticky;top:24px}}
 /* reviews link-out */
-.rvw .row{margin-top:8px}#inside h2+h3{margin-top:8px}.rvw h3{margin-top:var(--sp5)}
+.rvw .row{margin-top:8px}#inside h2+h3{margin-top:8px}.rvw h4{font:700 var(--s2)/1.4 var(--fb);margin:var(--sp5) 0 var(--sp2)}#inside .gal+.rvw+h3,#inside h3{margin-top:var(--sp6)}#inside h2+h3{margin-top:8px}
 /* book */
 .book{margin-top:var(--sec);padding-top:var(--sec);padding-bottom:var(--sec);border-top:2px solid var(--ink)}
 @media(min-width:860px){.book .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}}
