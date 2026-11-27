@@ -162,9 +162,19 @@ main section h2:not(#toc-h)::before{content:"";display:block;width:32px;height:4
 .spread .fig{font:700 var(--s4)/1.2 var(--fd);font-variant-numeric:tabular-nums;display:block}
 .how{font-size:var(--s2);background:var(--tone);padding:var(--sp4) 20px;margin:var(--sp4) 0 0;border-radius:4px}
 /* photos */
-.inside{display:grid;gap:var(--sp4);margin-top:var(--sp4)}
-@media(min-width:760px){.inside{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp5)}.inside+.inside{margin-top:var(--sp5)}}
-.inside figure,.shot{margin:0}.inside picture{display:block}.inside img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}.inside .xrf img{object-position:50% 45%}
+.shot{margin:0}
+/* clinic photo gallery: native swipe with scroll-snap, buttons are an extra */
+.gal{margin-top:var(--sp4)}
+.gal-track{display:grid;grid-auto-flow:column;grid-auto-columns:86%;gap:var(--sp3);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--green-d) transparent;padding-bottom:var(--sp2)}
+@media(min-width:760px){.gal-track{grid-auto-columns:62%;gap:var(--sp5)}}
+.gal-track figure{margin:0;min-width:0;scroll-snap-align:start}.gal-track picture{display:block}.gal-track img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.gal-track figcaption{font-size:var(--s1);line-height:1.6;color:var(--ink2);margin-top:var(--sp2)}
+.gal-track:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.gal-nav{display:flex;align-items:center;gap:var(--sp3);margin-top:var(--sp3)}
+.gal-btn{all:unset;box-sizing:border-box;width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--green-d);cursor:pointer}
+.gal-btn svg{width:22px;height:22px}.gal-btn[data-dir="-1"] svg{transform:scaleX(-1)}
+.gal-btn:focus-visible{outline:3px solid var(--ink);outline-offset:2px}.gal-btn[aria-disabled=true]{opacity:.45;cursor:default}
+.gal-count{margin:0;min-width:5em;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
 figcaption{padding-top:8px;font-size:var(--s1);color:var(--ink2)}
 .findus{margin:var(--sp4) 0 0}.findus img{width:100%}
 /* stock photos: one shape for all */
@@ -243,7 +253,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}@media(min-width:96
 .phbar .wrap{display:block}
 .rvwr{margin-top:var(--sp4)}
 
-.docs{list-style:none;margin:var(--sp3) 0 0;padding:0 var(--sp4);background:var(--tone);border-left:6px solid var(--green-d)}.docs li{display:grid;gap:var(--sp2) var(--sp5);padding:var(--sp4) 0}.docs li+li{border-top:1px solid var(--rule)}.sec .docs h3{margin:0;font:700 var(--s3)/1.5 var(--fd);text-wrap:balance}.docs p{margin:0}.docs .alt{color:var(--ink2);font-size:var(--s1)}.docs .area{line-height:1.7}.docs .area .k{display:block;color:var(--ink2);font-size:var(--s1)}@media(min-width:640px){.docs{padding:0 var(--sp5)}.docs li{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}}
+.docs{list-style:none;margin:var(--sp3) 0 0;padding:0 var(--sp4);background:var(--tone);border-left:6px solid var(--green-d)}.docs li{display:grid;gap:var(--sp2) var(--sp5);padding:var(--sp4) 0}.docs li+li{border-top:1px solid var(--rule)}.sec .docs h3{margin:0;font:700 var(--s3)/1.5 var(--fd);text-wrap:balance}.docs p{margin:0}.docs .alt{color:var(--ink2);font-size:var(--s1)}.docs .area{line-height:1.7}.docs .area .k{display:block;color:var(--ink2);font-size:var(--s1)}.docs.lg li{padding:var(--sp5) 0}.docs.lg h3{font-size:var(--s4)!important;line-height:1.4}.docs.lg .area{font-size:var(--s3);line-height:1.6}.docs.lg .area .k{font-size:var(--s1)}@media(min-width:640px){.docs{padding:0 var(--sp5)}.docs li{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}}
 
 .art{padding-top:var(--sp4)}
 .art .crumb{margin-bottom:var(--sp3)}
@@ -306,7 +316,7 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}@media(min-width:96
 <div><h3>ข้อดีของการพาเด็กตรวจฟัน</h3><ul class="ticks"><li>พบฟันผุตั้งแต่<span class="nw">เริ่มต้น</span> รักษาง่ายกว่า</li><li>เด็กคุ้นเคยกับหมอฟัน กลัวน้อยลง</li><li>ผู้ปกครองได้เรียนรู้การดูแลฟันเด็ก</li></ul></div><div><h3>ควรรู้</h3><ul class="ticks"><li>เด็กบางคนร้องหรือไม่ร่วมมือ อาจต้องนัดหลายครั้ง</li><li>เคลือบฟลูออไรด์ใช้ปริมาณตามที่<span class="nw">ทันตแพทย์</span>กำหนด</li><li>การรักษาบางอย่างต้องปรับตามความร่วมมือของเด็ก</li></ul></div></div></section>
 <section class="sec" id="urgent" aria-labelledby="urg-h"><div class="urgent"><h2 id="urg-h">อาการแบบไหนต้องไป<span class="nw">โรงพยาบาล</span>ทันที</h2><ul class="ticks"><li>ฟันแท้หลุดจากอุบัติเหตุ ให้รีบไปห้องฉุกเฉินหรือ<span class="nw">ทันตแพทย์</span>ทันที</li><li>บวมลามที่หน้า ไข้สูง</li><li>เลือดออกไม่หยุด</li></ul><p style="margin-bottom:0">อาการเหล่านี้อาจเป็นการติดเชื้อที่ลุกลาม ไม่ควรรอนัด<span class="nw">คลินิก</span></p></div></section>
 <section class="sec faq" id="wfaq" aria-labelledby="faq-h"><h2 id="faq-h">คำถามเรื่อง<span class="nw">ทันตกรรม</span>เด็ก</h2><details><summary><span class="q"><span class="nw">ทันตกรรม</span>เด็กราคาเท่าไหร่</span><span class="pm" aria-hidden="true"></span></summary><div class="a"><p style="margin:0">ราคาขึ้นกับสภาพช่องปากของแต่ละคน <span class="nw">ทันตแพทย์</span>ตรวจแล้วแจ้ง<span class="nw">ค่าใช้จ่าย</span>ทั้งหมดก่อนเริ่มทำ <span class="ph">[ราคา รอ<span class="nw">คลินิก</span>ยืนยัน]</span></p></div></details><details><summary><span class="q">พาลูกไปหาหมอฟันครั้งแรกตอนไหน</span><span class="pm" aria-hidden="true"></span></summary><div class="a"><p style="margin:0">หลายองค์กรแนะนำเมื่อฟันซี่แรกขึ้น หรือไม่เกินอายุ 1 ปี</p></div></details><details><summary><span class="q">ฟันน้ำนมผุต้องรักษาไหม</span><span class="pm" aria-hidden="true"></span></summary><div class="a"><p style="margin:0">ควรรักษา เพราะฟันน้ำนมผุทำให้ปวดและติดเชื้อ และมีผลกับฟันแท้ <span class="nw">ทันตแพทย์</span>ประเมินเป็นรายซี่</p></div></details><details><summary><span class="q">เด็กกลัวหมอฟัน ทำอย่างไร</span><span class="pm" aria-hidden="true"></span></summary><div class="a"><p style="margin:0">ให้เด็กมาทำความรู้จักก่อน <span class="nw">ทันตแพทย์</span>อธิบายขั้นตอนด้วยภาษาที่เด็กเข้าใจ <span class="ph">[ยืนยันวิธีของ<span class="nw">คลินิก</span>]</span></p></div></details><details><summary><span class="q">เคลือบฟลูออไรด์ทำให้เด็กปลอดภัยจากฟันผุไหม</span><span class="pm" aria-hidden="true"></span></summary><div class="a"><p style="margin:0">ช่วยลดความเสี่ยงฟันผุ แต่ไม่ได้ป้องกันได้ทั้งหมด ยังต้องแปรงฟันและควบคุมอาหารหวาน <a href="articles/fluoride/index.html">อ่านเรื่องเคลือบฟลูออไรด์</a></p></div></details>
-<p class="note" style="margin-top:24px">ข้อมูลในหน้านี้เป็นความรู้ทั่วไป ไม่ใช่การวินิจฉัย ควรให้<span class="nw">ทันตแพทย์</span>ตรวจก่อนตัดสินใจรักษา</p><p class="note">ตรวจทานเนื้อหาโดย: <span class="ph">[ชื่อ<span class="nw">ทันตแพทย์</span> รอข้อมูล]</span></p></section>
+<p class="note" style="margin-top:24px">ข้อมูลในหน้านี้เป็นความรู้ทั่วไป ไม่ใช่การวินิจฉัย ควรให้<span class="nw">ทันตแพทย์</span>ตรวจก่อนตัดสินใจรักษา</p></section>
 <section class="sec" aria-labelledby="rel-h"><h2 id="rel-h">บริการที่เกี่ยวข้อง</h2><ul class="links"><li><a href="articles/kids-tooth-decay/index.html">เด็กฟันผุ</a></li><li><a href="articles/fluoride/index.html">เคลือบฟลูออไรด์</a></li><li><a href="filling.html"><span class="t"><span class="nw">อุดฟัน</span></span></a></li><li><a href="orthodontics.html"><span class="t"><span class="nw">จัดฟัน</span></span></a></li></ul></section>
 </div></div>
 <section class="wrap book" id="book" aria-labelledby="book-h"><div class="grid"><div><h2 id="book-h">จองคิว<span class="nw">ทันตกรรม</span>เด็ก <span class="nw">หนองปรือ</span> <span class="nw">พัทยา</span></h2>
